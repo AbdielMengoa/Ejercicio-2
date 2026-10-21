@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>La Merienda de Locos</title>
+  <link rel="stylesheet" href="estilos-sombrerero.css">
+</head>
+<body>
+
+  <div class="tarjeta-juego">
+    <header class="encabezado">
+      <span class="insignia">Capítulo VII</span>
+      <h2>Merienda de Locos</h2>
+      <p>Ajusta el reloj del Sombrerero o responde sus acertijos.</p>
+    </header>
+
+    <div class="reloj-contenedor">
+      <div id="relojHora" class="reloj-display">06:00 PM</div>
+      <span class="reloj-subtexto">¡Siempre es la hora del té! 🫖</span>
+    </div>
+
+    <form id="formSombrerero" onsubmit="event.preventDefault();">
+      <div class="campo-grupo">
+        <label for="modoJuego">¿Qué quieres hacer?</label>
+        <select id="modoJuego">
+          <option value="adivinanza">Responder la Adivinanza</option>
+          <option value="mantequilla">Arreglar el reloj con Mantequilla</option>
+        </select>
+      </div>
+
+      <div class="campo-grupo" id="grupoEntrada">
+        <label id="labelInput" for="inputEntrada">¿En qué se parece un cuervo a un escritorio?</label>
+        <input type="text" id="inputEntrada" placeholder="Escribe tu respuesta..." required>
+      </div>
+
+      <button type="button" id="btnSombrerero">Enviar al Sombrerero 🎩</button>
+    </form>
+
+    <div class="consola-resultado" id="resSombrerero">
+      <span class="icono">🍵</span>
+      <p id="textoSombrerero">"¡No hay sitio, no hay sitio!", gritan la Liebre y el Sombrerero.</p>
+    </div>
+  </div>
+
+  <script src="codigo-sombrerero.js"></script>
+</body>
+</html>
